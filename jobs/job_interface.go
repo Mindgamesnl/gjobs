@@ -1,4 +1,4 @@
-package main
+package jobs
 
 const (
 	STATE_WAITING = iota

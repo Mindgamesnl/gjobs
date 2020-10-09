@@ -1,4 +1,4 @@
-package main
+package jobs
 
 import (
 	"github.com/orcaman/concurrent-map"
