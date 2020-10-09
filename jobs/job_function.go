@@ -34,7 +34,11 @@ func (f *FunctionJob) start() error {
 	}
 
 	f.state = STATE_RUNNING
-	go f.task()
+	go func() {
+		f.task()
+		f.state = STATE_STOPPED
+		f.onFinishCallback()
+	}()
 	return nil
 }
 
