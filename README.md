@@ -12,6 +12,7 @@ manager := gjobs.NewJobManager(2)
 
 # Jobs
 The job manager is what contains and manages the queue, each job has a few public api functions, these are
+- `Kill()` Kills the process (only if its a command and actually running)
 - `GetId() string` returns the job id
 - `GetState() int` returns the current job state, which is `STATE_WAITING`, `STATE_RUNNING`, or `STATE_STOPPED`
 - `GetType() int` returns the job type, which is `JOBTYPE_COMMAND` or `JOBTYPE_FUNCTION`

@@ -55,7 +55,7 @@ func (c *CommandJob) onFinish(callback func()) {
 	c.onFinishCallback = callback
 }
 
-func (c *CommandJob) kill() error {
+func (c *CommandJob) Kill() error {
 	if c.state != STATE_RUNNING {
 		return errors.New("Only running jobs may be killed")
 	}

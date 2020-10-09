@@ -38,7 +38,7 @@ func (f *FunctionJob) start() error {
 	return nil
 }
 
-func (f FunctionJob) kill() error {
+func (f FunctionJob) Kill() error {
 	return errors.New("Functional job's cant be killed")
 }
 

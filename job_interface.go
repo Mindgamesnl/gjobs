@@ -20,5 +20,5 @@ type Job interface {
 	OnStdErr(func(line string))
 	onFinish(callback func())
 	start() error
-	kill() error
+	Kill() error
 }
