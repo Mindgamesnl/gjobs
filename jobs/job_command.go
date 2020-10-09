@@ -68,6 +68,7 @@ func NewCommandJob(command []string) Job {
 	cj := CommandJob{
 		id:    uuid.New().String(),
 		state: STATE_WAITING,
+		onFinishCallback: func() {},
 	}
 
 	cj.runner = NewCommandRunner(command)

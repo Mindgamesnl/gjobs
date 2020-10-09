@@ -49,7 +49,11 @@ func (runner *CommandRunner) Kill() {
 }
 
 func NewCommandRunner(command []string) *CommandRunner {
-	runner := CommandRunner{}
+	runner := CommandRunner{
+		OnFinish: func() {},
+		OnSTDErr: func(line string) {},
+		OnSTDOut: func(line string) {},
+	}
 
 	runner.command = exec.Command(command[0], command[1:]...)
 
