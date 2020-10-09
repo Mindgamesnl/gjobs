@@ -94,3 +94,5 @@ func NewJobManager(maxConcurrentJobs int) *JobManager {
 
 	return &manager
 }
+
+func main() {}
