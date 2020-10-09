@@ -7,7 +7,7 @@ go get github.com/Mindgamesnl/gjobs
 # Job manager
 You need to get started by making a job manager, the only argument is `maxConcurrentJobs` which specifies the limit of allowed concurrent jobs
 ```go
-manager := gjobs.NewJobManager(2)
+manager := jobs.NewJobManager(2)
 ```
 
 # Jobs
