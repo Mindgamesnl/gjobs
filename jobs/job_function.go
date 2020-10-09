@@ -63,6 +63,7 @@ func NewFunctionJob(task func()) Job {
 		id: uuid.New().String(),
 		state: STATE_WAITING,
 		task: task,
+		onFinishCallback: func() {},
 	}
 
 	return &fj
